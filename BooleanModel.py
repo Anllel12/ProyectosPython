@@ -25,14 +25,9 @@ txt7 = 'Ese jugador es muy perro. No me parece bueno ese gesto.'
 
 tokensTxt1 = word_tokenize(txt1) # Partimos el texto en tokens
 
-# for words in tokensTxt1: # No funciona ns porque
-#     tokensTxt1 = words.lower()
-
 tokensTxt1 = [w.lower() for w in tokensTxt1] # Recorremos las lista para pasar a minusculas las palabras
-print(tokensTxt1)
 
 words = [word for word in tokensTxt1 if word.isalpha()] # Elimina guiones, comillas, puntos...
-print(words)
 
 stop_words = set(stopwords.words('spanish')) # Seleccionamos el español como palabras de parada
 filteredTxt1 = [w for w in words if not w in stop_words] # Vamos eliminando todas las palabras sobrantes
