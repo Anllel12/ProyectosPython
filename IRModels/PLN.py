@@ -1,8 +1,9 @@
-# Script para recrear un modelo Booleano sobre la recuperacion de informacion
-# en textos o documentos en relacion a una query
 # Primero haremos PLN sobre los textos ya introducidos, lo que quiere decir que 
-# tokenizaremos los textos, pasremos a minusculas y quitaremos signos de puntuacion, guiones...
+# tokenizaremos los textos, pasaremos a minusculas y quitaremos signos de puntuacion, guiones...
 # ademas filtraremos los textos con un stopWord, para finalmente hacer un stemming
+
+# Ángel Esquinas Puig
+# angelesquinaspuig@gmail.com
 
 
 # Carga de librerías
@@ -55,6 +56,6 @@ for w in bagTxt:
         else:
             doc.append(0)
     bagDocs.append(doc)
-    #doc.clear()
+    #doc.clear() 
 
 print(bagDocs)
