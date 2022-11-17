@@ -8,5 +8,15 @@
 # Carga de librerias
 import PLN as pln
 
-txt1 = 'El perro de San Roque no tiene rabo, - porque Ramón Ramírez se lo ha cortado.'
-print(pln.lexicalAnalisys(txt1))
+def vector(): # Creamos los vectores
+    bagDocs = []
+    doc = []
+
+    for w in bagTxt:
+        for t in query: # Creamos las lista de los terminos que aparecen
+            if w.__contains__(t):
+                doc.append(1)
+            else:
+                doc.append(0)
+        bagDocs.append(doc)
+        #doc.clear()
