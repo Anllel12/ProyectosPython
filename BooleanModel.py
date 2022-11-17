@@ -22,6 +22,7 @@ txt4 = 'El labrador es un perro muy noble, no se considera mordedor.'
 txt5 = 'El niño de Ramón es muy bueno.'
 txt6 = 'La niña aprobó el examen.'
 txt7 = 'Ese jugador es muy perro. No me parece bueno ese gesto.'
+query = 'El perro coge el mordedor'
 
 def lexicalAnalisys(txt):
     tokens = word_tokenize(txt) # Partimos el texto en tokens
@@ -38,11 +39,22 @@ def lexicalAnalisys(txt):
     # stemmedTxt = [PorterStemmer().stem(word) for word in filteredTxt] # Stemmer de las diferentes palabras
     # print(stemmedTxt)
 
-txt1 = lexicalAnalisys(txt1)
-txt2 = lexicalAnalisys(txt2)
-txt3 = lexicalAnalisys(txt3)
-txt4 = lexicalAnalisys(txt4)
-txt5 = lexicalAnalisys(txt5)
-txt6 = lexicalAnalisys(txt6)
-txt7 = lexicalAnalisys(txt7)
-print(txt1)
+bagTxt = [] # Lista de listas para mayor dinamismo
+bagTxt.append(lexicalAnalisys(txt1))
+bagTxt.append(lexicalAnalisys(txt2))
+
+query = lexicalAnalisys(query)
+
+bagDocs = []
+doc = []
+
+for w in bagTxt:
+    for t in query: # Creamos las lista de los terminos que aprecen
+        if w.__contains__(t):
+            doc.append(1)
+        else:
+            doc.append(0)
+    bagDocs.append(doc)
+    #doc.clear()
+
+print(bagDocs)
