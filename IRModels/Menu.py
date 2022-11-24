@@ -22,10 +22,11 @@ while seguir:
         bagRawText = fl.listTxt()
     elif num == 2:
         query = input('Introduce la query: ')
-        bagFiltered = pln.lexicalAnalisys(bagRawText)
+        bagFiltered = pln.lexicalAnalisysText(bagRawText)
         filteredQuery = pln.lexicalAnalisysQuery(query)
         result = bm.vector(bagFiltered, filteredQuery)
         print(bagFiltered)
+        print(result)
     elif num == 3:
         print('Putooooo')
     else:

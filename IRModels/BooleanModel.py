@@ -1,7 +1,6 @@
 # Modelo Booleano sobre la recuperacion de informacion en textos
 # o documentos en relacion a una query
 
-
 # Ángel Esquinas Puig
 # angelesquinaspuig@gmail.com
 
@@ -18,4 +17,5 @@ def vector(_bagFiltered, _filteredQuery): # Creamos los vectores
             else:
                 doc.append(0)
         bagDocs.append(doc)
-        #doc.clear() # Se me borra bagDocs tbn ns porque
+        doc.clear() # Se me borra bagDocs tbn ns porque
+    return bagDocs 
