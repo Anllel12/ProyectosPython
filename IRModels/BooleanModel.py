@@ -17,5 +17,6 @@ def vector(_bagFiltered, _filteredQuery): # Creamos los vectores
             else:
                 doc.append(0)
         bagDocs.append(doc)
-        doc.clear() # Se me borra bagDocs tbn ns porque
+        #doc.clear() # Se me borra bagDocs tbn ns porque
+        doc = []
     return bagDocs 
