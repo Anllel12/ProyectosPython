@@ -43,6 +43,6 @@ def lexicalAnalisysQuery(txt):
     filteredTxt = [w for w in words if not w in stop_words] # Vamos eliminando todas las palabras sobrantes
 
 
-        #porter = PorterStemmer()
-        # stemmedTxt = [PorterStemmer().stem(word) for word in filteredTxt] # Stemmer de las diferentes palabras
+    #porter = PorterStemmer()
+    # stemmedTxt = [PorterStemmer().stem(word) for word in filteredTxt] # Stemmer de las diferentes palabras
     return filteredTxt

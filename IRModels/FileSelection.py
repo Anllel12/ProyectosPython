@@ -17,4 +17,5 @@ def listTxt(): # Lista de textos para mayor dinamismo
     bagTxt = []
     bagTxt.append(txt1)
     bagTxt.append(txt2)
+    print("Textos seleccionados.\n")
     return bagTxt

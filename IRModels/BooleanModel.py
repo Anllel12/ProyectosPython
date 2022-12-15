@@ -20,3 +20,11 @@ def vector(_bagFiltered, _filteredQuery): # Creamos los vectores
         #doc.clear() # Se me borra bagDocs tbn ns porque
         doc = []
     return bagDocs 
+
+def txtRecom(_result):
+    recom = []        
+    for w in range(_result.__len__()):
+        if _result[w].count(1) > _result[w+1].count(1):
+            recom.insert(0, "texto" + w)
+        else:
+            recom.append("texto" + w)
